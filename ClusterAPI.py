@@ -1,12 +1,11 @@
 import firebase_admin
 from firebase_admin import credentials, db
 import matplotlib.pyplot as plt
-import pandas as pd
 import numpy as np
 from sklearn.cluster import KMeans
 
 # Connect to Google Firebase API.
-cred = credentials.Certificate('/Users/Li/Desktop/headsup-disaster--doxqbm-firebase-adminsdk-rmtzx-412ee01502.json')
+cred = credentials.Certificate('headsup-disaster--doxqbm-firebase-adminsdk-rmtzx-412ee01502.json')
 firebase_admin.initialize_app(cred, {
     'databaseURL': 'https://headsup-disaster-doxqbm.firebaseio.com/'
 })
@@ -34,6 +33,6 @@ def clusterCenters(n_clusters):
     return cluster.cluster_centers_,person_list
 
 
-n_camps = int(input("Number of relief camps to set up: "))
-relief_camp_coordinates = clusterCenters(n_camps)
-print(relief_camp_coordinates)
+##n_camps = int(input("Number of relief camps to set up: "))
+##relief_camp_coordinates = clusterCenters(n_camps)
+##print(relief_camp_coordinates)
