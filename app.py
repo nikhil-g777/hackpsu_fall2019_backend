@@ -1,4 +1,5 @@
 from flask import Flask, jsonify, request, CORS
+from flask_cors import CORS
 import requests
 import firebase_admin
 from firebase_admin import credentials, db
