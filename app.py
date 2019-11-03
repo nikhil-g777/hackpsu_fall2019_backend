@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, CORS
 import requests
 import firebase_admin
 from firebase_admin import credentials, db
@@ -13,6 +13,7 @@ firebase_admin.initialize_app(cred, {
 })
 
 app = Flask(__name__)
+CORS(app)
 
 @app.route('/weather')
 def weather():
