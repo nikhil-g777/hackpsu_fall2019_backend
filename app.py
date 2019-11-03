@@ -2,7 +2,6 @@ from flask import Flask, jsonify, request
 import requests
 import firebase_admin
 from firebase_admin import credentials, db
-import matplotlib.pyplot as plt
 import numpy as np
 from sklearn.cluster import KMeans
 import json
